@@ -3,9 +3,9 @@ import Link from "next/link";
 import Reveal from "@/components/motion/Reveal";
 
 export default function CTA({
-  title = "Have a date in mind already?",
-  description = "Tell us what you're planning and we'll put together a proposal within two business days.",
-  buttonLabel = "Get in touch",
+  title = "Have something worth building?",
+  description = "Tell us what you're thinking. Whether it's a brand, an event, an experience or something that doesn't quite have a name yet - let's figure it out together.",
+  buttonLabel = "Start a conversation →",
   href = "/contact-us",
 }: {
   title?: string;

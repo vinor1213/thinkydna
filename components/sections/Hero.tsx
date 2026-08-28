@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { STATS } from "@/lib/content";
 
 const container = {
   hidden: {},
@@ -147,13 +148,6 @@ const TICKETS = [
   },
 ];
 
-const STATS = [
-  { label: "Events hosted", value: "50+" },
-  { label: "Happy attendees", value: "15K+" },
-  { label: "Cities served", value: "12" },
-  { label: "Partner brands", value: "30+" },
-];
-
 // Returns the shortest signed distance (in card-steps) from `index` to `current`,
 // wrapping around the array — this is what lets the deck loop infinitely.
 function getOffset(index: number, current: number, length: number) {
@@ -265,27 +259,26 @@ export default function Hero() {
           <div className="lg:col-span-7">
             <motion.p variants={item} className="eyebrow mb-4 text-brand-red opacity-90 flex items-center gap-2">
               <span className="w-2 h-2 bg-brand-red rounded-full animate-pulse" />
-              Tickets on sale now
-              <div className="h-px w-12 bg-brand-red/30 ml-2" />
+              Great experiences shouldn't belong to just a handful of cities.
             </motion.p>
 
             <motion.h1
               variants={wordContainer}
               className="max-w-2xl font-display text-3xl font-semibold leading-[1.08] tracking-tight text-white sm:text-4xl md:text-5xl"
             >
-              <SplitWords text="Events your community" />{" "}
+              <SplitWords text="We're building a culture of" />{" "}
               <SplitWords
-                text="actually shows up"
+                text="better experiences"
                 className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-blue"
                 wordClassName="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-blue"
               />{" "}
-              <SplitWords text="for." />
+              <SplitWords text="in more cities." />
             </motion.h1>
 
             <motion.p variants={item} className="mt-4 max-w-xl text-sm leading-relaxed text-gray-300 md:text-base">
-              thinkydna plans, produces, and runs conferences, meetups, and
-              brand experiences from the first sketch to the last thank-you
-              email. Browse what's on and book your seat in a couple of taps.
+              We create live events, entertainment and community experiences
+              that bring fresh ideas, new formats and memorable moments to
+              audiences beyond the usual places.
             </motion.p>
 
        {/* Event detail bar — reads like a real listing, not a pitch */}
@@ -320,14 +313,12 @@ export default function Hero() {
 </motion.div>
 
             <motion.div variants={item} className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact-us" className="btn-primary group relative overflow-hidden">
+              <Link href="/community-events" className="btn-primary group relative overflow-hidden">
                 <span className="relative z-10 flex items-center gap-2">
-                  Book tickets
-                  <motion.div
-                    animate={{ scale: [1, 1.3, 1], opacity: [0.5, 1, 0.5] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="w-2 h-2 bg-white rounded-full"
-                  />
+                  Explore Our Events
+                  <motion.div animate={{ x: [0, 4, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
+                    <span className="inline-block">→</span>
+                  </motion.div>
                 </span>
                 <motion.div
                   className="absolute inset-0 bg-brand-gradient"
@@ -335,16 +326,6 @@ export default function Hero() {
                   whileHover={{ x: "100%" }}
                   transition={{ duration: 0.6 }}
                 />
-              </Link>
-              <Link
-                href="/#portfolio"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:border-white/50 hover:-translate-y-0.5 hover:bg-white/5"
-              >
-                <span className="w-4 h-px bg-white/50" />
-                See full lineup
-                <motion.div animate={{ x: [0, 4, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
-                  <span className="inline-block">→</span>
-                </motion.div>
               </Link>
             </motion.div>
 

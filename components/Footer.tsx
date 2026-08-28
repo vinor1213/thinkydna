@@ -63,8 +63,6 @@ const COLUMNS = [
     title: "Studio",
     links: [
       { href: "/#about", label: "About us" },
-      { href: "/#portfolio", label: "Portfolio" },
-      { href: "/#testimonials", label: "Testimonials" },
       { href: "/#faq", label: "FAQ" },
     ],
   },

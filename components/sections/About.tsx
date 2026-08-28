@@ -1,19 +1,7 @@
 import Image from "next/image";
 import Reveal from "@/components/motion/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
-
-const STATS = [
-  { value: "10k+", label: "Completed Projects" },
-  { value: "15k", label: "Satisfied Customers" },
-  { value: "10k+", label: "Years of Mastery" },
-  { value: "45+", label: "Worldwide Honors" },
-];
-
-const AVATARS = [
-  "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=100&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=100&auto=format&fit=crop",
-];
+import { STATS } from "@/lib/content";
 
 export default function About() {
   return (
@@ -45,9 +33,8 @@ export default function About() {
               </div>
 
               <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-ink sm:text-4xl">
-                A small studio built for events that need to work{" "}
-                <span className="text-ink/60">the first time,</span>{" "}
-                every single time.
+                We build brands, create experiences,{" "}
+                <span className="text-ink/60">and make ideas matter.</span>
               </h2>
             </Reveal>
 
@@ -88,7 +75,7 @@ export default function About() {
       {/* Stat chip pinned into the bottom-right corner of the frame */}
       <div className="absolute -right-5 -bottom-5 z-30 flex flex-col items-center justify-center rounded-full bg-ink w-24 h-24 shadow-lg rotate-[6deg]">
         <span className="font-display text-lg font-semibold text-white leading-none">
-          50+
+          10+
         </span>
         <span className="mt-1 text-[10px] uppercase tracking-wide text-white/60 text-center leading-tight">
           Events run
@@ -127,23 +114,31 @@ export default function About() {
             </StaggerGroup>
 
             <Reveal direction="up" delay={0.1} className="mt-6">
-              <p className="text-sm leading-relaxed text-gray-500">
-                We started as a two-person crew running meetups out of a coffee shop —
-                just a laptop, a dream, and way too many extension cords. We're bigger now,
-                but the standard hasn't moved. Every event gets a dedicated producer, a
-                clear budget, and a team that shows up before the doors open and stays
-                until the last chair is stacked.
+              <h3 className="font-display text-lg font-semibold text-ink">
+                It started with a gap.
+              </h3>
+              <p className="text-sm leading-relaxed text-gray-500 mt-4">
+                There was always something interesting happening in the bigger
+                cities - better events, newer formats, live entertainment,
+                creative experiences, communities built around shared
+                interests. But the same opportunities didn't always make
+                their way to Tier 2 and Tier 3 cities. ThinkyDNA started with
+                a simple belief: where you live shouldn't decide what you get
+                to experience.
               </p>
               <p className="text-sm leading-relaxed text-gray-500 mt-4">
-                We've produced everything from intimate workshops of 20 to multi-day
-                conferences with over 2,000 attendees. Along the way, we've learned that
-                the difference between a good event and a great one isn't the size of the
-                venue — it's the attention to detail. It's knowing when the catering
-                needs to arrive, having a backup for the backup mic, and anticipating
-                the questions your speakers haven't even thought to ask yet.
+                We wanted to bring the energy, ideas and experiences usually
+                concentrated in Tier 1 cities to more places - while creating
+                them in a way that feels relevant to the people there. What
+                began with events has grown into a larger ambition: building
+                brands, creating experiences and bringing people together
+                across cities that deserve more of them. From live
+                entertainment and community events to brand experiences and
+                corporate engagements, ThinkyDNA exists to close that gap -
+                one city, one idea and one experience at a time.
               </p>
             </Reveal>
-
+{/* 
             <StaggerGroup className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
               {STATS.map((stat) => (
                 <StaggerItem key={stat.label} className="border-l-2 border-ink/10 pl-3">
@@ -153,7 +148,7 @@ export default function About() {
                   <p className="mt-1 text-xs text-gray-500">{stat.label}</p>
                 </StaggerItem>
               ))}
-            </StaggerGroup>
+            </StaggerGroup> */}
 
         
           </div>

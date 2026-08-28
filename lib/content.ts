@@ -1,8 +1,8 @@
 export const STATS = [
-  { value: "120+", label: "Events produced" },
-  { value: "45K", label: "Attendees hosted" },
-  { value: "9", label: "Cities covered" },
-  { value: "98%", label: "Client return rate" },
+  { value: "10+", label: "Events Produced" },
+  { value: "3,000+", label: "People We've Brought Together" },
+  { value: "5+", label: "Cities & Counting" },
+  { value: "5+", label: "Artists & Performers" },
 ];
 
 export const SERVICES = [
@@ -69,15 +69,16 @@ export const PORTFOLIO = [
 ];
 
 export const CLIENTS = [
-  "Northline",
-  "Founders Circle",
-  "Pulse",
-  "Riverside Co.",
-  "Maker's Table",
-  "Horizon Labs",
-  "Vantage",
-  "Elevate",
+
+  { name: "Apollo Hospitals", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9JMQYl3tq2H9z2iwGtB1I1RkNcOyJO3t_xYfvUGgd9w&s=10" },
+  { name: "M.M Silks", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-EXSBvk_h_rsrEObcSjiqYrYtO9x0oL90WC0vnVrm3g&s" },
+  { name: "M.S Pattu Maaligai", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnKNUY99P9_CL1ygi0V7IYlglXXVFQq1ebqPSbrjrdMg&s=10" },
+  { name: "Thirukumaran Silks", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7q-HFI1aQTShUuQ08GbYsjeH_myYGJqCGH-cXkMTGeQ&s=10" },
+  { name: "IndieMaa", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyJvFesbAzOIwfq1YE6xCM3uB4QnantkypVkGeI5-M8wbxTnIZe4q9hiU&s=10" },
+  { name: "Mervyn Rozz", logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp4AYVPMZvihdM_oYqkzSICCugNlX4FSb-kHjQLnJ9fg&s=10" },
+
 ];
+
 
 export const TESTIMONIALS = [
   {
@@ -101,24 +102,40 @@ export const TESTIMONIALS = [
 
 export const FAQ = [
   {
-    q: "What kinds of events do you take on?",
-    a: "Community meetups, conferences, brand activations, and festival-scale live experiences. If it needs a room, a crowd, and a run of show, we can plan it.",
+    q: "What cities do you work in?",
+    a: "We're based in Salem and work across Tamil Nadu - from Tier 2 and Tier 3 cities to the state's major urban centres.",
   },
   {
-    q: "How far in advance should we book?",
-    a: "6–10 weeks for community events and meetups, 12–20 weeks for conferences or multi-city series. Tight timelines are possible — tell us the date and we'll tell you what's realistic.",
+    q: "Can you handle just part of an event?",
+    a: "Absolutely. Bring us in for the full experience or just what you need - production, marketing, artists, content or on-ground execution.",
   },
   {
-    q: "Do you handle venues and vendors, or just planning?",
-    a: "Both. We can run the full stack — venue sourcing, vendor contracts, AV, staffing, and day-of production — or plug into a piece of an event you're already planning.",
+    q: "Do you manage artists?",
+    a: "Yes. We manage a curated roster of artists and also help brands and organisers find the right talent for their events.",
   },
   {
-    q: "What's included in a typical proposal?",
-    a: "A run-of-show draft, budget breakdown by line item, vendor shortlist, and a timeline with every milestone up to event day. No hidden production fees added later.",
+    q: "Can you work with our existing brand identity?",
+    a: "Yes. We can work within your existing identity or help evolve it when your brand is ready for its next chapter.",
   },
   {
-    q: "Can you work with our internal marketing team?",
-    a: "Yes — most of our conference and launch work sits alongside an in-house team. We take production off their plate while they own the brand and content.",
+    q: "What kind of events do you work on?",
+    a: "Corporate events, product launches, live entertainment, community experiences and brand activations - built around what the audience and objective actually need.",
+  },
+  {
+    q: "What if we don't have a clear brief yet?",
+    a: "That's okay. You bring the problem, ambition or half-formed idea. We'll help turn it into something workable.",
+  },
+  {
+    q: "Do you work with smaller businesses?",
+    a: "Yes. We care more about the idea and the ambition behind it than the size of the business.",
+  },
+  {
+    q: "How early should we get in touch?",
+    a: "The earlier, the better - especially for larger events and launches. But if you've already got a date breathing down your neck, talk to us anyway.",
+  },
+  {
+    q: "Why do you focus on Tier 2 and Tier 3 cities?",
+    a: "Because great experiences shouldn't be limited by geography. We're building more opportunities for people across Tamil Nadu to experience the kind of events, entertainment and communities often concentrated in bigger cities.",
   },
 ];
 

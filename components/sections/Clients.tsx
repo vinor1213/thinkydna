@@ -2,33 +2,75 @@
 
 import { motion } from "framer-motion";
 import { CLIENTS } from "@/lib/content";
+import Image from "next/image";
 
 export default function Clients() {
-  const loop = [...CLIENTS, ...CLIENTS];
+  // Create 3 loops for seamless infinite scroll
+  const loop = [...CLIENTS, ...CLIENTS, ...CLIENTS];
 
   return (
-    <section id="clients" className="border-y border-gray-200 bg-white py-14">
+    <section id="clients" className="border-y border-gray-200 bg-white py-8">
       <div className="container-page">
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-gray-400">
-          Trusted by teams and communities across India
-        </p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-gray-400"
+        >
+          Trusted by industry leaders
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="mt-3 text-center text-2xl font-display font-semibold text-gray-800"
+        >
+          Built with people who believe in good ideas
+        </motion.p>
       </div>
 
-      <div className="relative mt-8 overflow-hidden">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent" />
+      <div className="relative mt-6 overflow-hidden">
+        {/* Gradient overlays */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white via-white/80 to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white via-white/80 to-transparent" />
+
+        {/* Animated marquee - different style */}
         <motion.div
-          className="flex w-max gap-16 pr-16"
-          animate={{ x: ["0%", "-50%"] }}
-          transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+          className="flex w-max gap-12 pr-12"
+          animate={{
+            x: ["0%", "-33.33%"],
+            transition: {
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+            }
+          }}
         >
-          {loop.map((name, i) => (
-            <div
-              key={`${name}-${i}`}
-              className="flex items-center justify-center whitespace-nowrap font-display text-lg font-semibold text-gray-400 transition-colors hover:text-brand-magenta"
+          {loop.map((client, i) => (
+            <motion.div
+              key={`${client.name}-${i}`}
+              className="flex items-center justify-center gap-3 group"
+              whileHover={{ scale: 1.05, y: -2 }}
+              transition={{ type: "spring", stiffness: 300, damping: 15 }}
             >
-              {name}
-            </div>
+              {client.logo ? (
+                <div className="relative h-8 w-24 grayscale transition-all duration-300 group-hover:grayscale-0 group-hover:brightness-110">
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              ) : (
+                <span className="whitespace-nowrap font-display text-base font-semibold text-gray-400 transition-colors group-hover:text-brand-magenta">
+                  {client.name}
+                </span>
+              )}
+            </motion.div>
           ))}
         </motion.div>
       </div>
