@@ -53,35 +53,49 @@ export default function CommunityEventsPage() {
 
           <StaggerGroup className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {COMMUNITY_EVENTS.map((event) => (
-              <StaggerItem key={event.title} direction="scale">
+              <StaggerItem key={event.slug} direction="scale">
                 <article className="card-surface group h-full overflow-hidden">
-                  <div className="relative h-36 overflow-hidden">
-                    <Image
-                      src={event.image}
-                      alt={event.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                    />
-                    <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-brand-magenta backdrop-blur-sm">
-                      {event.tag}
-                    </span>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="font-display text-base font-semibold text-ink">
-                      {event.title}
-                    </h3>
-                    <p className="mt-1 text-sm text-gray-500">
-                      {event.location}
-                    </p>
-                    <p className="mt-1 text-sm font-medium text-gray-600">
-                      {event.date}
-                    </p>
+                  <Link
+                    href={`/community-events/${event.slug}`}
+                    className="block"
+                    aria-label={`View details for ${event.title}`}
+                  >
+                    <div className="relative h-36 overflow-hidden">
+                      <Image
+                        src={event.image}
+                        alt={event.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                      />
+                      <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-brand-magenta backdrop-blur-sm">
+                        {event.tag}
+                      </span>
+                    </div>
+                    <div className="p-6 pb-0">
+                      <h3 className="font-display text-base font-semibold text-ink transition-colors group-hover:text-brand-magenta">
+                        {event.title}
+                      </h3>
+                      <p className="mt-1 text-sm text-gray-500">
+                        {event.location}
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-gray-600">
+                        {event.date}
+                      </p>
+                    </div>
+                  </Link>
+                  <div className="flex items-center gap-3 p-6 pt-4">
+                    <Link
+                      href={`/community-events/${event.slug}`}
+                      className="btn-secondary !px-5 !py-2 inline-flex text-xs"
+                    >
+                      View details
+                    </Link>
                     <Link
                       href="/contact-us"
-                      className="btn-secondary !px-5 !py-2 mt-4 inline-flex text-xs"
+                      className="inline-flex text-xs font-semibold text-brand-magenta hover:text-ink"
                     >
-                      Reserve a seat
+                      Reserve a seat →
                     </Link>
                   </div>
                 </article>

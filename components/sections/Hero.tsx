@@ -227,7 +227,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1920&auto=format&fit=crop"
+          src="/images/image-1.png"
           alt="Crowd with hands raised at a live event"
           className="h-full w-full object-cover opacity-15"
         />

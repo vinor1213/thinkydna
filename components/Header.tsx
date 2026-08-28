@@ -9,6 +9,7 @@ import Logo from "./Logo";
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/community-events", label: "Community Events" },
+  { href: "/team", label: "Team" },
   { href: "/work-with-us", label: "Work with Us" },
   { href: "/contact-us", label: "Contact Us" },
 ];
@@ -40,7 +41,10 @@ export default function Header() {
 
         <nav className="hidden items-center gap-1 md:flex">
           {NAV_LINKS.map((link) => {
-            const active = pathname === link.href;
+            const active =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname === link.href || pathname.startsWith(`${link.href}/`);
             return (
               <Link
                 key={link.href}

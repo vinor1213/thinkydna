@@ -22,7 +22,7 @@ export default function FAQSection() {
 
           <div className="relative flex-1 w-full min-h-[300px] overflow-hidden rounded-2xl">
             <Image
-              src="https://media.istockphoto.com/id/501387734/photo/dancing-friends.webp?a=1&b=1&s=612x612&w=0&k=20&c=bUDxktHlH235pfdX2F1dRU5-73sUlFDAkwU5H_Ymmlk="
+              src="/images/image-2.png"
               alt="Team answering questions"
               fill
               className="object-cover"

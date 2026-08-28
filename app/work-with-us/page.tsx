@@ -9,7 +9,7 @@ import { ROLES, WHY_JOIN } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Work with Us — thinkydna",
-  description: "Open roles at thinkydna, an event studio based in Salem, Tamil Nadu.",
+  description: "Open roles at thinkydna, an event studio based in Coimbatore, Tamil Nadu.",
 };
 
 export default function WorkWithUsPage() {

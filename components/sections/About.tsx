@@ -90,8 +90,8 @@ export default function About() {
           <div className="flex flex-col h-full">
             <StaggerGroup className="grid grid-cols-2 gap-4">
               {[
-                "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=600&auto=format&fit=crop",
-                "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop",
+                "/images/image-2.png",
+                "/images/image-3.png",
               ].map((src, i) => (
                 <StaggerItem
                   key={src}

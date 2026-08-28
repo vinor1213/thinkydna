@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
+import { COMMUNITY_EVENTS } from "@/lib/content";
 
 // SVG Icons with className support
 interface IconProps {
@@ -70,18 +71,20 @@ const COLUMNS = [
     title: "Explore",
     links: [
       { href: "/community-events", label: "Community events" },
+      { href: "/team", label: "Our team" },
       { href: "/work-with-us", label: "Work with us" },
       { href: "/contact-us", label: "Contact us" },
     ],
   },
 ];
 
-// Upcoming event data
+// Upcoming event data — pulled from the live community events list
+const nextEvent = COMMUNITY_EVENTS[0];
 const UPCOMING_EVENT = {
-  name: "Design & Community Summit 2026",
-  date: "August 25, 2026",
-  location: "Salem, Tamil Nadu",
-  href: "/events/summit-2026",
+  name: nextEvent.title,
+  date: nextEvent.date,
+  location: nextEvent.location,
+  href: `/community-events/${nextEvent.slug}`,
 };
 
 export default function Footer() {
@@ -134,10 +137,10 @@ export default function Footer() {
               <li className="flex items-center gap-2">
                 <Icons.Email />
                 <a
-                  href="mailto:hello@thinkydna.com"
+                  href="mailto:hello@thinkydna.in"
                   className="transition-colors hover:text-brand-magenta"
                 >
-                  hello@thinkydna.com
+                  hello@thinkydna.in
                 </a>
               </li>
               <li className="flex items-center gap-2">
@@ -146,12 +149,12 @@ export default function Footer() {
                   href="tel:+910000000000"
                   className="transition-colors hover:text-brand-magenta"
                 >
-                  +91 00000 00000
+                  +91 9080982872
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Icons.Location className="mt-0.5 shrink-0" />
-                <span>Salem, Tamil Nadu, India</span>
+                <span>Coimbatore, Tamil Nadu, India</span>
               </li>
             </ul>
 

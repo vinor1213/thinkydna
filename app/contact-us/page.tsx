@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const CONTACT_DETAILS = [
   {
     label: "Email",
-    value: "hello@thinkydna.com",
+    value: "hello@thinkydna.in",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M2 5h20v14H2z" />
@@ -22,7 +22,7 @@ const CONTACT_DETAILS = [
   },
   {
     label: "Phone",
-    value: "+91 00000 00000",
+    value: "+91 9080982872",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M4 3h5l2 6-3 2c1 3 3 5 6 6l2-3 6 2v5c0 1-1 2-2 2C10 23 1 14 1 5c0-1 1-2 2-2z" />
@@ -31,7 +31,7 @@ const CONTACT_DETAILS = [
   },
   {
     label: "Studio",
-    value: "Salem, Tamil Nadu, India",
+    value: "Coimbatore, Tamil Nadu, India",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
         <path d="M12 2v20M2 8l10-6 10 6M4 8v13h16V8" />
