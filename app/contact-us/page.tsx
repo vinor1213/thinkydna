@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image"; // ← Added this
+import Image from "next/image";
 import SectionHeading from "@/components/SectionHeading";
 import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/motion/Reveal";
@@ -10,10 +10,46 @@ export const metadata: Metadata = {
 };
 
 const CONTACT_DETAILS = [
-  { label: "Email", value: "hello@thinkydna.com" },
-  { label: "Phone", value: "+91 00000 00000" },
-  { label: "Studio", value: "Salem, Tamil Nadu, India" },
-  { label: "Response time", value: "Within 1 business day" },
+  {
+    label: "Email",
+    value: "hello@thinkydna.com",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M2 5h20v14H2z" />
+        <path d="M2 6l10 8 10-8" />
+      </svg>
+    ),
+  },
+  {
+    label: "Phone",
+    value: "+91 00000 00000",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M4 3h5l2 6-3 2c1 3 3 5 6 6l2-3 6 2v5c0 1-1 2-2 2C10 23 1 14 1 5c0-1 1-2 2-2z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Studio",
+    value: "Salem, Tamil Nadu, India",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 2v20M2 8l10-6 10 6M4 8v13h16V8" />
+        <path d="M9 21v-6h6v6" />
+      </svg>
+    ),
+  },
+  {
+    label: "Response time",
+    value: "Within 1 business day",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+        <path d="M6.3 6.3l2.8 2.8M14.9 14.9l2.8 2.8M17.7 6.3l-2.8 2.8M9.1 14.9l-2.8 2.8" />
+        <path d="M12 7v5l3 3" />
+      </svg>
+    ),
+  },
 ];
 
 export default function ContactUsPage() {
@@ -32,7 +68,7 @@ export default function ContactUsPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a2e]/70 via-[#1a1a2e]/85 to-[#1a1a2e]" />
         </div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(180,40,40,0.15),transparent_70%)]" />
-        
+
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative py-20 pb-14 pt-20">
           <p className="text-xs uppercase tracking-widest font-semibold mb-4 text-[#d42a2a]">
             contact us
@@ -56,11 +92,23 @@ export default function ContactUsPage() {
               description="Share a few details and a producer will follow up with next steps — no obligation, no generic sales deck."
             />
 
-            <dl className="mt-10 space-y-5 border-t border-gray-200 pt-8">
+            <dl className="mt-10 divide-y divide-gray-200 border-t border-b border-gray-200">
               {CONTACT_DETAILS.map((item) => (
-                <div key={item.label} className="flex items-baseline justify-between gap-4">
-                  <dt className="text-sm text-gray-400">{item.label}</dt>
-                  <dd className="text-sm font-medium text-[#1a1a2e]">{item.value}</dd>
+                <div
+                  key={item.label}
+                  className="group flex items-center gap-4 py-5 transition-colors hover:bg-gray-50"
+                >
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-gray-300 text-[#1a1a2e] transition-colors group-hover:border-[#d42a2a] group-hover:text-[#d42a2a]">
+                    <span className="h-[18px] w-[18px]">{item.icon}</span>
+                  </div>
+                  <div className="flex flex-1 items-baseline justify-between gap-4">
+                    <dt className="text-xs uppercase tracking-wider text-gray-400">
+                      {item.label}
+                    </dt>
+                    <dd className="text-sm font-medium text-[#1a1a2e]">
+                      {item.value}
+                    </dd>
+                  </div>
                 </div>
               ))}
             </dl>
