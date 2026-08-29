@@ -8,9 +8,10 @@ import Logo from "./Logo";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/community-events", label: "Community Events" },
-  { href: "/team", label: "Team" },
-  { href: "/work-with-us", label: "Work with Us" },
+  { href: "/", label: "What we do" },
+  { href: "/events", label: "Events" },
+  // { href: "/team", label: "Team" },
+  // { href: "/work-with-us", label: "Work with Us" },
   { href: "/contact-us", label: "Contact Us" },
 ];
 

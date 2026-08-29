@@ -9,7 +9,7 @@ import { TEAM_MEMBERS, STATS } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Our Team — thinkydna",
   description:
-    "Meet the people behind thinkydna — the small, senior team producing community events, brand experiences, and live gatherings across Tamil Nadu.",
+    "Meet the people behind thinkydna — the small, senior team producing Events, brand experiences, and live gatherings across Tamil Nadu.",
   alternates: {
     canonical: "https://thinkydna.in/team",
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://thinkydna.in/team",
     title: "Our Team — thinkydna",
     description:
-      "Meet the people behind thinkydna — the small, senior team producing community events, brand experiences, and live gatherings across Tamil Nadu.",
+      "Meet the people behind thinkydna — the small, senior team producing Events, brand experiences, and live gatherings across Tamil Nadu.",
   },
 };
 

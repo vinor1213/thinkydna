@@ -1,16 +1,23 @@
+
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Logo({ dark = false }: { dark?: boolean }) {
   return (
     <Link
       href="/"
-      className="inline-flex items-baseline gap-[1px] font-display text-2xl font-bold lowercase tracking-tight"
+      className="inline-flex items-center"
       aria-label="thinkydna — home"
     >
-      <span className={dark ? "text-white" : "text-ink"}>thinky</span>
-      <span className="bg-brand-gradient bg-clip-text text-transparent">
-        dna
-      </span>
+      <Image
+        src="/images/thinkydna.png"
+        alt="thinkydna"
+        width={160}
+        height={50}
+        priority
+        className="h-auto w-40 object-contain"
+      />
     </Link>
   );
 }
+

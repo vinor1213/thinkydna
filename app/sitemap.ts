@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${BASE_URL}/community-events`,
+      url: `${BASE_URL}/events`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
@@ -38,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const eventRoutes: MetadataRoute.Sitemap = COMMUNITY_EVENTS.map((event) => ({
-    url: `${BASE_URL}/community-events/${event.slug}`,
+    url: `${BASE_URL}/events/${event.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.8,

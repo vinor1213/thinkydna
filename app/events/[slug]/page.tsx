@@ -34,11 +34,11 @@ export function generateMetadata({ params }: Props): Metadata {
     title,
     description,
     alternates: {
-      canonical: `https://thinkydna.in/community-events/${event.slug}`,
+      canonical: `https://thinkydna.in/events/${event.slug}`,
     },
     openGraph: {
       type: "article",
-      url: `https://thinkydna.in/community-events/${event.slug}`,
+      url: `https://thinkydna.in/events/${event.slug}`,
       title,
       description,
       images: [{ url: event.image, width: 1200, height: 630, alt: event.title }],
@@ -87,7 +87,7 @@ export default function EventDetailPage({ params }: Props) {
       price: event.price.replace(/[^0-9.]/g, "") || "0",
       priceCurrency: "INR",
       availability: "https://schema.org/InStock",
-      url: `https://thinkydna.in/community-events/${event.slug}`,
+      url: `https://thinkydna.in/events/${event.slug}`,
     },
   };
 
@@ -114,10 +114,10 @@ export default function EventDetailPage({ params }: Props) {
         <div className="absolute inset-0 bg-brand-radial" />
         <Reveal className="container-page relative section-pad pb-14 pt-20">
           <Link
-            href="/community-events"
+            href="/events"
             className="mb-6 inline-flex items-center gap-2 text-sm font-medium text-gray-300 transition-colors hover:text-white"
           >
-            ← All community events
+            ← All Events
           </Link>
           <p className="eyebrow mb-4 text-brand-red">{event.tag}</p>
           <h1 className="max-w-2xl font-display text-4xl font-semibold tracking-tight text-white md:text-5xl">
@@ -248,7 +248,7 @@ export default function EventDetailPage({ params }: Props) {
               {otherEvents.map((e) => (
                 <StaggerItem key={e.slug} direction="scale">
                   <Link
-                    href={`/community-events/${e.slug}`}
+                    href={`/events/${e.slug}`}
                     className="card-surface group block h-full overflow-hidden"
                   >
                     <div className="relative h-36 overflow-hidden">

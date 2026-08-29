@@ -16,8 +16,8 @@ export default function FAQSection() {
         <Reveal direction="left" className="flex h-full flex-col space-y-8">
           <SectionHeading
             eyebrow="FAQ"
-            title="Good to know before you reach out"
-            description="Can't find what you're looking for? Send us a note on the contact page and we'll get back within a business day."
+            title="Before we get into it."
+            description="A few things you might want to know before bringing us your idea."
           />
 
           <div className="relative flex-1 w-full min-h-[300px] overflow-hidden rounded-2xl">

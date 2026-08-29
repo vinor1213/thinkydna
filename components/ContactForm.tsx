@@ -3,16 +3,18 @@
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 
-const EVENT_TYPES = [
-  "Community event",
-  "Conference",
-  "Brand activation",
+const LOOKING_FOR_OPTIONS = [
+  "Branding",
+  "Event Management",
+  "Brand Experience",
+  "Content & Social",
+  "Artist / Entertainment",
+  "Community Event",
   "Not sure yet",
 ];
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
-  const [eventType, setEventType] = useState(EVENT_TYPES[0]);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -57,7 +59,7 @@ export default function ContactForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="text-sm font-medium text-ink">
-            Full name
+            Full Name
           </label>
           <input
             id="name"
@@ -69,7 +71,7 @@ export default function ContactForm() {
         </div>
         <div>
           <label htmlFor="email" className="text-sm font-medium text-ink">
-            Email
+            Email ID
           </label>
           <input
             id="email"
@@ -81,41 +83,57 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div>
-        <label className="text-sm font-medium text-ink">Event type</label>
-        <div className="mt-2 flex flex-wrap gap-2">
-          {EVENT_TYPES.map((type) => (
-            <button
-              type="button"
-              key={type}
-              onClick={() => setEventType(type)}
-              className={`rounded-full border px-4 py-2 text-xs font-medium transition-colors ${
-                eventType === type
-                  ? "border-transparent bg-brand-gradient text-white"
-                  : "border-gray-300 text-gray-500 hover:border-brand-magenta hover:text-brand-magenta"
-              }`}
-            >
-              {type}
-            </button>
-          ))}
+      <div className="grid gap-5 sm:grid-cols-2">
+        <div>
+          <label htmlFor="phone" className="text-sm font-medium text-ink">
+            Phone/WhatsApp
+          </label>
+          <input
+            id="phone"
+            required
+            type="tel"
+            placeholder="+91 98765 43210"
+            className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm outline-none transition-colors focus:border-brand-magenta"
+          />
+        </div>
+        <div>
+          <label htmlFor="company" className="text-sm font-medium text-ink">
+            Company/Organization{" "}
+            <span className="font-normal text-gray-400">(Optional)</span>
+          </label>
+          <input
+            id="company"
+            type="text"
+            placeholder="Your company"
+            className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm outline-none transition-colors focus:border-brand-magenta"
+          />
         </div>
       </div>
 
       <div>
-        <label htmlFor="date" className="text-sm font-medium text-ink">
-          Target date (optional)
+        <label htmlFor="lookingFor" className="text-sm font-medium text-ink">
+          What are you looking for?
         </label>
-        <input
-          id="date"
-          type="text"
-          placeholder="e.g. Late September 2026"
-          className="mt-2 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm outline-none transition-colors focus:border-brand-magenta"
-        />
+        <select
+          id="lookingFor"
+          required
+          defaultValue=""
+          className="mt-2 w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-brand-magenta"
+        >
+          <option value="" disabled>
+            Select an option
+          </option>
+          {LOOKING_FOR_OPTIONS.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div>
         <label htmlFor="message" className="text-sm font-medium text-ink">
-          Tell us about the event
+          Tell us a little about it.
         </label>
         <textarea
           id="message"
@@ -127,7 +145,7 @@ export default function ContactForm() {
       </div>
 
       <button type="submit" className="btn-primary w-full sm:w-auto">
-        Send message
+        Start the conversation
       </button>
     </form>
   );

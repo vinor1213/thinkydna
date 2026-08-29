@@ -257,10 +257,7 @@ export default function Hero() {
         >
           {/* Left: Listing content */}
           <div className="lg:col-span-7">
-            <motion.p variants={item} className="eyebrow mb-4 text-brand-red opacity-90 flex items-center gap-2">
-              <span className="w-2 h-2 bg-brand-red rounded-full animate-pulse" />
-              Great experiences shouldn't belong to just a handful of cities.
-            </motion.p>
+       
 
             <motion.h1
               variants={wordContainer}
@@ -313,7 +310,7 @@ export default function Hero() {
 </motion.div>
 
             <motion.div variants={item} className="mt-6 flex flex-col gap-3 sm:flex-row">
-              <Link href="/community-events" className="btn-primary group relative overflow-hidden">
+              <Link href="/events" className="btn-primary group relative overflow-hidden">
                 <span className="relative z-10 flex items-center gap-2">
                   Explore Our Events
                   <motion.div animate={{ x: [0, 4, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>

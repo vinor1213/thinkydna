@@ -18,18 +18,12 @@ export default function Clients() {
           viewport={{ once: true }}
           className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-gray-400"
         >
-          Trusted by industry leaders
+        Built with people who believe in good ideas
+
+
         </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="mt-3 text-center text-2xl font-display font-semibold text-gray-800"
-        >
-          Built with people who believe in good ideas
-        </motion.p>
+    
       </div>
 
       <div className="relative mt-6 overflow-hidden">

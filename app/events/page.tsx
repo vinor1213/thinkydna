@@ -8,9 +8,9 @@ import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 import { COMMUNITY_EVENTS } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Community Events — thinkydna",
+  title: "Events — thinkydna",
   description:
-    "Upcoming community events, meetups, and conferences produced by thinkydna.",
+    "Upcoming Events, meetups, and conferences produced by thinkydna.",
 };
 
 export default function CommunityEventsPage() {
@@ -30,13 +30,12 @@ export default function CommunityEventsPage() {
         </div>
         <div className="absolute inset-0 bg-brand-radial" />
         <Reveal className="container-page relative section-pad pb-14 pt-20">
-          <p className="eyebrow mb-4 text-brand-red">Community events</p>
+          <p className="eyebrow mb-4 text-brand-red">Events</p>
           <h1 className="max-w-2xl font-display text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            Gatherings we&apos;re running across the community this season.
+            Something worth leaving home for.
           </h1>
           <p className="mt-5 max-w-xl text-base text-gray-300">
-            Open meetups, member sessions, and conferences — most are free
-            to attend. Reserve a seat or bring your team.
+          We're bringing live entertainment, fresh event formats and memorable experiences to cities across Tamil Nadu creating more reasons to step out, connect and experience something different.
           </p>
         </Reveal>
       </section>
@@ -46,8 +45,8 @@ export default function CommunityEventsPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Calendar"
-              title="Upcoming events"
-              description="New dates are added monthly. Want your community added to the calendar? Reach out on the contact page."
+              title="What's coming up."
+              description="See what's happening next across our events, experiences and communities."
             />
           </Reveal>
 
@@ -56,7 +55,7 @@ export default function CommunityEventsPage() {
               <StaggerItem key={event.slug} direction="scale">
                 <article className="card-surface group h-full overflow-hidden">
                   <Link
-                    href={`/community-events/${event.slug}`}
+                    href={`/events/${event.slug}`}
                     className="block"
                     aria-label={`View details for ${event.title}`}
                   >
@@ -86,7 +85,7 @@ export default function CommunityEventsPage() {
                   </Link>
                   <div className="flex items-center gap-3 p-6 pt-4">
                     <Link
-                      href={`/community-events/${event.slug}`}
+                      href={`/events/${event.slug}`}
                       className="btn-secondary !px-5 !py-2 inline-flex text-xs"
                     >
                       View details

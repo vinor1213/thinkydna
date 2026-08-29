@@ -12,7 +12,7 @@ export default function EventNotFound() {
           It may have wrapped up, moved, or the link might be off. Take a
           look at what&apos;s coming up next.
         </p>
-        <Link href="/community-events" className="btn-primary mt-8">
+        <Link href="/events" className="btn-primary mt-8">
           View all events
         </Link>
       </div>

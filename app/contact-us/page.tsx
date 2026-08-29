@@ -74,11 +74,10 @@ export default function ContactUsPage() {
             contact us
           </p>
           <h1 className="max-w-2xl font-display text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            Help us build the events people plan their calendars around.
+            Have something worth building?
           </h1>
           <p className="mt-5 max-w-xl text-base text-gray-300">
-            We&apos;re a small, senior team — every hire owns real events from
-            day one, not a slice of one.
+            Whether it's a brand that needs direction, an event that needs bringing to life, an experience you've been thinking about, or an artist you're looking to book - tell us what you're working on.
           </p>
         </div>
       </section>

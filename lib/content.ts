@@ -7,7 +7,7 @@ export const STATS = [
 
 export const SERVICES = [
   {
-    title: "Community events",
+    title: "Events",
     description:
       "Meetups, conferences, and member gatherings planned end to end — venue, run of show, and the follow-up that keeps people coming back.",
   },
@@ -347,9 +347,9 @@ export const COMMUNITY_EVENTS: CommunityEvent[] = [
       "https://images.unsplash.com/photo-1508973379184-7517410fb0bc?q=80&w=1200&auto=format&fit=crop",
     ],
     excerpt:
-      "Our flagship two-day summit for founders — the event that started thinkydna's community events line-up.",
+      "Our flagship two-day summit for founders — the event that started thinkydna's Events line-up.",
     about: [
-      "Founders Circle Summit is our flagship gathering — the event that kicked off thinkydna's community events line-up, now in its next edition. Two days of talks, workshops, and structured networking for founders at every stage.",
+      "Founders Circle Summit is our flagship gathering — the event that kicked off thinkydna's Events line-up, now in its next edition. Two days of talks, workshops, and structured networking for founders at every stage.",
       "The format stays intentionally tight: focused sessions in the morning, workshops and 1:1 mentor slots in the afternoon, and a proper closing dinner to end each day.",
     ],
     highlights: [
