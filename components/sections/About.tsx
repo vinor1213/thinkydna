@@ -88,26 +88,25 @@ export default function About() {
 
           {/* Right column: image collage, copy, stats, avatars */}
           <div className="flex flex-col h-full">
-            <StaggerGroup className="grid grid-cols-2 gap-4">
-              {[
-                "/images/image-2.png",
-                "/images/image-3.png",
-              ].map((src, i) => (
-                <StaggerItem
-                  key={src}
-                  className="relative overflow-hidden rounded-xl2"
-                >
-                  <Image
-                    src={src}
-                    alt="thinkydna team at work"
-                    width={600}
-                    height={500}
-                    className="h-40 w-full object-cover sm:h-48"
-                  />
-
-                </StaggerItem>
-              ))}
-            </StaggerGroup>
+         <StaggerGroup className="grid grid-cols-2 gap-4">
+  {[
+    "/images/image-2.png",
+    "/images/image-3.png",
+  ].map((src) => (
+    <StaggerItem
+      key={src}
+      className="relative overflow-hidden rounded-xl2"
+    >
+      <Image
+        src={src}
+        alt="thinkydna team at work"
+        width={600}
+        height={500}
+        className="h-60 w-full object-cover rounded-[70px_20px_70px_20px] sm:h-72"
+      />
+    </StaggerItem>
+  ))}
+</StaggerGroup>
 
             <Reveal direction="up" delay={0.1} className="mt-6 text-justify">
               <h3 className="font-display text-lg font-semibold text-ink">
@@ -120,13 +119,7 @@ export default function About() {
                 ThinkyDNA was born to change that - bringing better experiences to Tier 2 and Tier 3 cities while creating them in a way that feels local, relevant and worth showing up for. What started with events is growing into something bigger: building brands, creating experiences and bringing people together, one city at a time.
               </p>
 
-              <p className="text-sm leading-relaxed text-gray-500 mt-4">
-                We believe great experiences should not be limited by geography. Every city has
-                its own culture, energy and community, and our goal is to build experiences that
-                connect with people where they are. By combining creative ideas, local
-                understanding and thoughtful execution, ThinkyDNA continues to make every
-                event feel meaningful, accessible and memorable.
-              </p>
+
 
 
             </Reveal>
