@@ -42,33 +42,44 @@ export default function WhatWeCreatePage() {
 
       <section className="section-pad bg-white">
         <div className="container-page">
-          <StaggerGroup className="grid gap-6 md:grid-cols-2">
+          <StaggerGroup className="divide-y divide-gray-200 border-t border-gray-200">
             {WHAT_WE_CREATE.map((item) => (
               <StaggerItem
                 key={item.number}
-                className="card-surface flex h-full flex-col p-8"
+                className="group grid gap-4 py-10 md:grid-cols-12 md:gap-8 md:py-14"
               >
-                <span className="font-display text-sm font-semibold text-brand-magenta">
-                  {item.number}
-                </span>
-                <h2 className="mt-3 font-display text-2xl font-semibold text-ink">
-                  {item.title}
-                </h2>
-                <p className="mt-3 text-base font-medium leading-snug text-ink/70">
-                  {item.hook}
-                </p>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-gray-500">
-                  {item.description}
-                </p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {item.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-gray-200 px-3 py-1 text-xs font-medium text-gray-500"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                {/* Number */}
+                <div className="md:col-span-2">
+                  <span className="font-display text-5xl font-semibold text-gray-200 transition-colors duration-300 group-hover:text-brand-magenta md:text-6xl">
+                    {item.number}
+                  </span>
+                </div>
+
+                {/* Title + hook */}
+                <div className="md:col-span-4">
+                  <h2 className="font-display text-2xl font-semibold text-ink md:text-3xl">
+                    {item.title}
+                  </h2>
+                  <p className="mt-2 text-base font-medium leading-snug text-ink/70">
+                    {item.hook}
+                  </p>
+                </div>
+
+                {/* Description + tags */}
+                <div className="md:col-span-6">
+                  <p className="max-w-xl text-sm leading-relaxed text-gray-500 md:text-base">
+                    {item.description}
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2">
+                    {item.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs font-medium uppercase tracking-wide text-gray-400"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </StaggerItem>
             ))}
