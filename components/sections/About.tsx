@@ -88,25 +88,25 @@ export default function About() {
 
           {/* Right column: image collage, copy, stats, avatars */}
           <div className="flex flex-col h-full">
-         <StaggerGroup className="grid grid-cols-2 gap-4">
-  {[
-    "/images/image-2.png",
-    "/images/image-3.png",
-  ].map((src) => (
-    <StaggerItem
-      key={src}
-      className="relative overflow-hidden rounded-xl2"
-    >
-      <Image
-        src={src}
-        alt="thinkydna team at work"
-        width={600}
-        height={500}
-        className="h-60 w-full object-cover rounded-[70px_20px_70px_20px] sm:h-72"
-      />
-    </StaggerItem>
-  ))}
-</StaggerGroup>
+            <StaggerGroup className="grid grid-cols-2 gap-4">
+              {[
+                "/images/image-2.png",
+                "/images/image-3.png",
+              ].map((src) => (
+                <StaggerItem
+                  key={src}
+                  className="relative overflow-hidden rounded-xl2"
+                >
+                  <Image
+                    src={src}
+                    alt="thinkydna team at work"
+                    width={600}
+                    height={500}
+                    className="h-60 w-full object-cover rounded-[70px_20px_70px_20px] sm:h-72"
+                  />
+                </StaggerItem>
+              ))}
+            </StaggerGroup>
 
             <Reveal direction="up" delay={0.1} className="mt-6 text-justify">
               <h3 className="font-display text-lg font-semibold text-ink">

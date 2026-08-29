@@ -6,6 +6,8 @@ import CTA from "@/components/sections/CTA";
 import Reveal from "@/components/motion/Reveal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/Stagger";
 import { COMMUNITY_EVENTS } from "@/lib/content";
+import ReserveSeatFAB from "@/components/ReserveSeatFAB";
+import EventReserveButton from "@/components/EventReserveButton";
 
 export const metadata: Metadata = {
   title: "Events — thinkydna",
@@ -32,10 +34,18 @@ export default function CommunityEventsPage() {
         <Reveal className="container-page relative section-pad pb-14 pt-20">
           <p className="eyebrow mb-4 text-brand-red">Events</p>
           <h1 className="max-w-2xl font-display text-4xl font-semibold tracking-tight text-white md:text-5xl">
-            Something worth leaving home for.
+            We&apos;re bringing more reasons to show up.
           </h1>
           <p className="mt-5 max-w-xl text-base text-gray-300">
-          We're bringing live entertainment, fresh event formats and memorable experiences to cities across Tamil Nadu creating more reasons to step out, connect and experience something different.
+            Somewhere between work, home and the endless scroll, there should
+            be somewhere to go. Somewhere to laugh, meet someone new, listen
+            to something different, learn something, or simply have a really
+            good evening.
+          </p>
+          <p className="mt-3 max-w-xl text-base text-gray-300">
+            We&apos;re building experiences that create those moments —
+            particularly in cities where great experiences are often harder
+            to find.
           </p>
         </Reveal>
       </section>
@@ -45,7 +55,7 @@ export default function CommunityEventsPage() {
           <Reveal>
             <SectionHeading
               eyebrow="Calendar"
-              title="What's coming up."
+              title="Upcoming Events"
               description="See what's happening next across our events, experiences and communities."
             />
           </Reveal>
@@ -90,12 +100,12 @@ export default function CommunityEventsPage() {
                     >
                       View details
                     </Link>
-                    <Link
-                      href="/contact-us"
+                    <EventReserveButton
+                      eventName={event.title}
                       className="inline-flex text-xs font-semibold text-brand-magenta hover:text-ink"
                     >
                       Reserve a seat →
-                    </Link>
+                    </EventReserveButton>
                   </div>
                 </article>
               </StaggerItem>
@@ -109,6 +119,8 @@ export default function CommunityEventsPage() {
         description="From a single meetup to a recurring series, we'll build the run of show and handle the logistics."
         buttonLabel="Talk to us"
       />
+
+      <ReserveSeatFAB />
     </>
   );
 }

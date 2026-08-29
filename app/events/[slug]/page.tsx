@@ -10,6 +10,8 @@ import {
   COMMUNITY_EVENTS,
   getCommunityEventBySlug,
 } from "@/lib/content";
+import ReserveSeatFAB from "@/components/ReserveSeatFAB";
+import EventReserveButton from "@/components/EventReserveButton";
 
 type Props = {
   params: { slug: string };
@@ -227,9 +229,12 @@ export default function EventDetailPage({ params }: Props) {
                   <dd className="mt-0.5 font-medium text-ink">{event.capacity}</dd>
                 </div>
               </dl>
-              <Link href="/contact-us" className="btn-primary mt-6 w-full">
+              <EventReserveButton
+                eventName={event.title}
+                className="btn-primary mt-6 w-full"
+              >
                 Reserve a seat
-              </Link>
+              </EventReserveButton>
             </div>
           </Reveal>
         </div>
@@ -279,6 +284,8 @@ export default function EventDetailPage({ params }: Props) {
         description="From a single meetup to a recurring series, we'll build the run of show and handle the logistics."
         buttonLabel="Talk to us"
       />
+
+      <ReserveSeatFAB eventName={event.title} />
     </>
   );
 }

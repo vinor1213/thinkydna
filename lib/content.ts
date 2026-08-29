@@ -23,6 +23,79 @@ export const SERVICES = [
   },
 ];
 
+export type WhatWeCreateItem = {
+  number: string;
+  title: string;
+  hook: string;
+  description: string;
+  tags: string[];
+};
+
+export const WHAT_WE_CREATE: WhatWeCreateItem[] = [
+  {
+    number: "01",
+    title: "Branding",
+    hook: "Give your business something worth remembering.",
+    description:
+      "We build brands from the inside out — positioning, identity, voice, storytelling and everything that makes a business feel like a brand.",
+    tags: ["Strategy", "Identity", "Positioning", "Content", "Campaigns"],
+  },
+  {
+    number: "02",
+    title: "Events",
+    hook: "Don't just fill a room. Give people a reason to be there.",
+    description:
+      "From corporate events and launches to live shows and community experiences, we take an idea from the first sketch to the final applause.",
+    tags: ["Concept", "Production", "Management", "Marketing", "Execution"],
+  },
+  {
+    number: "03",
+    title: "Experiences",
+    hook: "People forget what you said. They remember what you made them feel.",
+    description:
+      "We create brand activations, pop-ups and real-world experiences that turn passive audiences into participants.",
+    tags: ["Activations", "Launches", "Pop-ups", "Engagement"],
+  },
+  {
+    number: "04",
+    title: "Entertainment",
+    hook: "Put the right person on the stage. Watch the room change.",
+    description:
+      "Through artist management and entertainment booking, we connect brands, events and audiences with artists who belong in the room.",
+    tags: ["Comedy", "Music", "Live Entertainment", "Artist Management"],
+  },
+  {
+    number: "05",
+    title: "Content & Social",
+    hook: "Don't just be seen. Give people something to remember.",
+    description:
+      "We turn brands, founders and ideas into content that earns attention — from social strategy and everyday storytelling to campaign content and the moments that happen around your events.",
+    tags: [
+      "Social Strategy",
+      "Content Creation",
+      "Reels",
+      "Photography",
+      "Videography",
+      "Campaigns",
+    ],
+  },
+  {
+    number: "06",
+    title: "Community Events",
+    hook: "People don't need another event. They need a reason to show up.",
+    description:
+      "We create experiences that bring people together around things worth experiencing — comedy, music, conversations, creativity and everything in between.",
+    tags: [
+      "Community",
+      "Comedy",
+      "Music",
+      "Meetups",
+      "Workshops",
+      "Social Experiences",
+    ],
+  },
+];
+
 export const PORTFOLIO = [
   {
     title: "Founders Circle Summit",

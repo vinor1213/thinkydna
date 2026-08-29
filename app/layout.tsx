@@ -12,6 +12,7 @@ import "./globals.css";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ReserveSeatProvider } from "@/components/ReserveSeatModal";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://thinkydna.in"),
@@ -118,11 +119,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="font-sans">
       <body>
-        <Header />
+        <ReserveSeatProvider>
+          <Header />
 
-        <main>{children}</main>
+          <main>{children}</main>
 
-        <Footer />
+          <Footer />
+        </ReserveSeatProvider>
       </body>
     </html>
   );
