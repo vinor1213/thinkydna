@@ -77,7 +77,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/images/thinkydna.png",
+        url: "https://thinkydna.vercel.app/images/thinkydna.png",
         width: 1200,
         height: 630,
         alt: "thinkydna — Event Studio & Brand Experiences",
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     description:
       "Creating events, brand experiences, and live gatherings from first idea to last encore.",
 
-    images: ["/images/thinkydna.png"],
+    images: ["https://thinkydna.vercel.app/images/thinkydna.png"],
   },
 
   robots: {
