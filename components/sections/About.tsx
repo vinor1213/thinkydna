@@ -47,7 +47,7 @@ export default function About() {
                   {/* White card with photo */}
                   <div className="absolute left-[10px] top-0 z-10 h-[280px] w-[230px] overflow-hidden rounded-[16px] border-[2px] border-brand-red bg-white shadow-xl">
                     <Image
-                      src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=500&auto=format&fit=crop"
+                      src="/images/image-4.png"
                       alt="thinkydna producers on site before doors open"
                       width={230}
                       height={280}
